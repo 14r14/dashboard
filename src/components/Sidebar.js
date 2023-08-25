@@ -42,7 +42,7 @@ export function CCDSidebar() {
   const openJsx = (
     <>
       <Card
-        className={`fixed h-full top-0 left-0 z-40 rounded-r-lg rounded-l-none w-full max-w-[20rem] p-4 shadow-lg shadow-blue-gray-900/5 bg-gradient-to-b from-deep-orange-50 via-deep-orange-100 to-deep-orange-50 translate-x-20`}
+        className={`fixed h-full top-0 left-0 z-40 rounded-r-lg rounded-l-none w-full max-w-[20rem] p-4 shadow-lg shadow-blue-gray-900/5 bg-gradient-to-b from-deep-orange-50 via-deep-orange-100 to-deep-orange-50`}
       >
         <div className="transition-all duration-300 ease-in-out shadow-md cursor-pointer mb-2 bg-white rounded-lg p-2 hover:scale-105 hover:-rotate-12 hover:shadow-lg">
           <Link

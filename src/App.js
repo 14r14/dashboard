@@ -7,7 +7,15 @@ function App() {
     <>
       <CCDSidebar />
       <div className="m-32 text-xl">
-        <a href={`http://localhost:3000/signup?durl=${window.location.href}`}>Sign Up</a>
+        <a
+          href={`${
+            process.env.NODE_ENV === "development"
+              ? "http://localhost:3000"
+              : "https://authenticator-frontend.vercel.app"
+          }/signup?durl=${window.location.href}`}
+        >
+          Sign Up
+        </a>
       </div>
       <Routes>
         <Route path="/sso-success" element={<SSOSuccess />} />

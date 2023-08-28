@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <CCDSidebar />
-      <div className="m-32 text-xl">
+      <div className="flex flex-col items-center text-xl w-full">
         <a
           href={`${
             process.env.NODE_ENV === "development"
@@ -15,6 +15,15 @@ function App() {
           }/signup?durl=${window.location.href}`}
         >
           Sign Up
+        </a>
+        <a
+          href={`${
+            process.env.NODE_ENV === "development"
+              ? "http://localhost:3000"
+              : "https://authenticator-frontend.vercel.app"
+          }/signin?durl=${window.location.href}`}
+        >
+          Sign In
         </a>
       </div>
       <Routes>

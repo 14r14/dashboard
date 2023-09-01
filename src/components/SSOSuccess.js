@@ -19,7 +19,7 @@ function SSOSuccess() {
       searchParams.get("repPts")
     );
 
-    // window.location = `${searchParams.get("durl").split("?")[0]}`;
+    window.location = `${searchParams.get("durl").split("?")[0]}`;
   }, [searchParams, authCtx]);
   return (
     <div className="absolute z-50 flex w-full h-screen justify-center items-center bg-[#FFDB58]">

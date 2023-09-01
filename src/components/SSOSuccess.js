@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import AuthContext from "../store/AuthContext";
+import LoadingSpinner from "./LoadingSpinner";
 
 function SSOSuccess() {
   const [searchParams] = useSearchParams();
@@ -18,9 +19,13 @@ function SSOSuccess() {
       searchParams.get("repPts")
     );
 
-    window.location = `${searchParams.get("durl").split("?")[0]}`;
+    // window.location = `${searchParams.get("durl").split("?")[0]}`;
   }, [searchParams, authCtx]);
-  return <div>Logging you in...</div>;
+  return (
+    <div className="absolute z-50 flex w-full h-screen justify-center items-center bg-[#FFDB58]">
+      <LoadingSpinner textSize="text-xl" textWeight="font-bold" />
+    </div>
+  );
 }
 
 export default SSOSuccess;
